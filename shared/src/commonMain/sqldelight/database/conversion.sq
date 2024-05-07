@@ -1,0 +1,50 @@
+CREATE TABLE conversionRateEntity(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    currencyCode TEXT NOT NULL,
+    rate REAL NOT NULL
+);
+
+CREATE TABLE currencyEntity(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    currencyCode TEXT NOT NULL,
+    currencyName TEXT NOT NULL
+);
+
+getLatestConversionRates:
+SELECT *
+FROM conversionRateEntity
+ORDER BY id
+DESC;
+
+
+insertConversionRateEntity:
+REPLACE
+INTO conversionRateEntity(
+    id,
+    currencyCode,
+    rate
+)
+VALUES(?, ?,?);
+
+clearConversionRates:
+DELETE
+FROM conversionRateEntity;
+
+getAllCurrencies:
+SELECT *
+FROM currencyEntity
+ORDER BY id
+DESC;
+
+insertCurrencyEntity:
+REPLACE
+INTO currencyEntity(
+    id,
+    currencyCode,
+    currencyName
+)
+VALUES(?, ?,?);
+
+clearCurrencies:
+DELETE
+FROM currencyEntity;

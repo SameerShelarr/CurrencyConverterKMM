@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="close">Close</string>
+    <string name="open">Open</string>
+    <string name="enter_amount_to_convert">Enter Amount to Convert</string>
+    <string name="unknown_error_occurred">Unknown error occurred!</string>
+    <string name="server_error_please_try_again_later">Server error, Please try again later!</string>
+    <string name="conversion_rates_unavailable">Conversion rates unavailable, Please try again later!</string>
+    <string name="all_conversions">All Conversions</string>
+</resources>
